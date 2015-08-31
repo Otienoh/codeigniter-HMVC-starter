@@ -102,7 +102,7 @@
                <span class="arrow"></span>
                </a>
                <ul class="sub">
-                  <li><a class="" href="#">Demo 1</a></li>
+                  <li><a class="" href="<?php echo site_url('encryption_algos/');?>">Demo 1</a></li>
                   <li><a class="" href="#">Demo 2</a></li>
                   <li><a class="" href="#">Demo 3</a></li>
                   <li><a class="" href="#">Demo 4</a></li>
@@ -114,7 +114,7 @@
                <span class="arrow"></span>
                </a>
                <ul class="sub">
-                  <li><a class="" href="<?php echo site_url('hashing_algos/demo');?>">Demo 1</a></li>
+                  <li><a class="" href="<?php echo site_url('hashing_algos/');?>">Demo 1</a></li>
                   <li><a class="" href="#">Demo 2</a></li>
                   <li><a class="" href="#">Demo 3</a></li>
                   <li><a class="" href="#">Demo 4</a></li>

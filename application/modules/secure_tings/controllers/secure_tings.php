@@ -14,7 +14,7 @@ function hash_it($password){
 }
  
 function kuchocha($password){
-	$chocha = $password.="3456789abhijklmnopqrstuvRSTUVWYZ@#$%^&*";
+	$chocha = $pass12word.="3456789abhijklmnopqrstuvRSTUVWYZ@#$%^&*";
 	return $chocha;
 
 }

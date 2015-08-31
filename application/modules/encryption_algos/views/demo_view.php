@@ -5,16 +5,13 @@
                               <div class="control-group">
                                  <label class="control-label" for="input3">Unencrypted Text</label>
                                  <div class="controls">
-                                    <input type="text" class="span6 popovers" id="input3" data-trigger="hover" data-content="This text will be hashed using the chosen technique." data-original-title="Plain Text" />
+                                    <input type="text" class="span6 popovers" id="input3" data-trigger="hover" data-content="This text will be hashed using the demo technique." data-original-title="Demo one" />
                                  </div>
                               </div>
                                                
                              
                               <div class="form-actions">
-                              <button type="submit" class="btn btn-primary ">HASH</button>
-                              <button type="submit" class="btn btn-primary ">HASH</button>
-                              <button type="submit" class="btn btn-primary ">HASH</button>
-                              <button type="submit" class="btn btn-primary ">HASH</button>
+                                 <button type="submit" class="btn btn-primary ">HASH</button>
                                  
                               </div>
                            </form>
