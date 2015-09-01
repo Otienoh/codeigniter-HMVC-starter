@@ -8,8 +8,9 @@ parent::__construct();
 $this->load->library('encrypt' );
 }
 
-function index(){
+function hashe_md5(){
 	//echo "welcome to Dashboard";
+	
 	$data['section'] = "Twiga";
     $data['subtitle'] = "Hashing Algorithms";
   	$data['page_title'] = "Demo";
@@ -18,22 +19,74 @@ function index(){
 	echo Modules::run('template/admin', $data);
 }
 
-function md5_hashing($text){
-
-	$safe_password1 = md5($text);
-	echo $safe_password1;
+function hashe_sha1(){
+	//echo "welcome to Dashboard";
+	
+	$data['section'] = "Twiga";
+    $data['subtitle'] = "Hashing Algorithms";
+  	$data['page_title'] = "Demo";
+	$data['module'] = "hashing_algos";
+	$data['view_file'] = "demo_view1";
+	echo Modules::run('template/admin', $data);
 }
 
-function Sha1_hashing($text){
-
-$safe_password1 = $this->encrypt->sha1($text);
-echo $safe_password1;
+function hashe_sha512(){
+	//echo "welcome to Dashboard";
+	
+	$data['section'] = "Twiga";
+    $data['subtitle'] = "Hashing Algorithms";
+  	$data['page_title'] = "Demo";
+	$data['module'] = "hashing_algos";
+	$data['view_file'] = "demo_view2";
+	echo Modules::run('template/admin', $data);
 }
 
-function Sha512_hashing($text){
+function get_data_from_post(){
+             $plaintext = $this->input->post('plaintext', TRUE);
+            return $plaintext;
+        }
 
-	$safe_password1 = hash("sha512", $text);
-	echo $safe_password1;
+
+function md5_hashing(){
+	$this->load->library('form_validation');
+	$this->form_validation->set_rules('plaintext', 'Plain Text', 'required|xss_clean');
+	$plaintext= $this->get_data_from_post();
+	$data['cihphered'] = md5($plaintext);
+	
+	$data['section'] = "Twiga";
+    $data['subtitle'] = "Hashing Algorithms";
+  	$data['page_title'] = "Demo";
+	$data['module'] = "hashing_algos";
+	$data['view_file'] = "demo_view";
+	echo Modules::run('template/admin', $data);
+}
+
+function Sha1_hashing(){
+$this->load->library('form_validation');
+$this->form_validation->set_rules('plaintext', 'Plain Text', 'required|xss_clean');
+$plaintext= $this->get_data_from_post();
+$data['cihphered'] = $this->encrypt->sha1($plaintext);
+$data['section'] = "Twiga";
+$data['subtitle'] = "Hashing Algorithms";
+$data['page_title'] = "Demo";
+$data['module'] = "hashing_algos";
+$data['view_file'] = "demo_view1";
+echo Modules::run('template/admin', $data);
+
+}
+
+function Sha512_hashing(){
+$this->load->library('form_validation');
+$this->form_validation->set_rules('plaintext', 'Plain Text', 'required|xss_clean');
+$plaintext= $this->get_data_from_post();
+$data['cihphered'] =  hash("sha512", $plaintext);
+$data['section'] = "Twiga";
+$data['subtitle'] = "Hashing Algorithms";
+$data['page_title'] = "Demo";
+$data['module'] = "hashing_algos";
+$data['view_file'] = "demo_view2";
+echo Modules::run('template/admin', $data);
+	
 }
 
 }

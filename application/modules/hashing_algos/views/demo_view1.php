@@ -5,7 +5,7 @@
                             <?php echo validation_errors('<div class="alert alert-danger alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><b>',' </b></div>');?>
 
                             <?php 
-                            echo form_open('hashing_algos/md5_hashing', ['class' => 'form-horizontal']);?>
+                            echo form_open('hashing_algos/sha1_hashing', ['class' => 'form-horizontal']);?>
                               <div class="control-group">
                                  <label class="control-label" for="plaintext">Unencrypted Text</label>
                                  <!-- <div class="">
@@ -14,12 +14,12 @@
                                  <div class="controls">
         <?php
         echo form_error('plaintext');
-        echo form_input(['name' => 'plaintext', 'id' => 'plaintext',  'class' => 'span6 popovers',  'data-trigger' => 'hover', 'data-content' => 'This text will be hashed using the chosen technique.','data-original-title' => 'Plain Text']);
+        echo form_input(['name' => 'plaintext', 'id' => 'plaintext',  'class' => 'span6 popovers', 'data-trigger' => 'hover', 'data-content' => 'This text will be hashed using the chosen technique.','data-original-title' => 'Plain Text']);
         ?>
       </div>
                               </div> 
                               <div class="form-actions">
-                              <button type="submit" name="submit" class="btn btn-primary ">Hash with MD5</button>
+                              <button type="submit" name="submit" class="btn btn-primary ">Hash with SHA1</button>
                            
                                  
                               </div>

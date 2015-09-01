@@ -27,7 +27,8 @@
   
    <link rel="stylesheet" href="<?php echo base_url() ?>assets/bootstrap-toggle-buttons/static/stylesheets/bootstrap-toggle-buttons.css" />
    <link rel="stylesheet" href="<?php echo base_url() ?>assets/data-tables/DT_bootstrap.css" />
-   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/bootstrap-daterangepicker/daterangepicker.css" />
+ 
+   <script src="<?php echo base_url() ?>assets/js/jquery-1.8.2.min.js"></script>    
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -92,11 +93,12 @@
                <span class="arrow"></span>
                </a>
                <ul class="sub">
-                  <li><a class="" href="<?php echo site_url('uploads');?>">Manage Files</a></li>
+                  <li><a class="" href="<?php echo site_url('uploads');?>">Uploads Files</a></li>
+                  <li><a class="" href="<?php echo site_url('uploads/list_files');?>">Download Files</a></li>
                  
                </ul>
             </li>
-            <li class="has-sub">
+            <!-- <li class="has-sub">
                <a href="javascript:;" class="">
                <i class="icon-exchange"></i> Encrypting Demos
                <span class="arrow"></span>
@@ -107,17 +109,17 @@
                   <li><a class="" href="#">Demo 3</a></li>
                   <li><a class="" href="#">Demo 4</a></li>
                </ul>
-            </li>
+            </li> -->
             <li class="has-sub">
                <a href="javascript:;" class="">
                <i class="icon-eye-close"></i> Hashing Demos
                <span class="arrow"></span>
                </a>
                <ul class="sub">
-                  <li><a class="" href="<?php echo site_url('hashing_algos/');?>">Demo 1</a></li>
-                  <li><a class="" href="#">Demo 2</a></li>
-                  <li><a class="" href="#">Demo 3</a></li>
-                  <li><a class="" href="#">Demo 4</a></li>
+                  <li><a class="" href="<?php echo site_url('hashing_algos/hashe_md5');?>">MD5 Demo</a></li>
+                  <li><a class="" href="<?php echo site_url('hashing_algos/hashe_sha1');?>">SHA1 Demo</a></li>
+                  <li><a class="" href="<?php echo site_url('hashing_algos/hashe_sha512');?>">SHA512 Demo</a></li>
+                  
                </ul>
             </li>
             <li class="has-sub">
@@ -205,8 +207,8 @@
    <![endif]-->
    <script type="text/javascript" src="<?php echo base_url() ?>assets/chosen-bootstrap/chosen/chosen.jquery.min.js"></script>
    <script type="text/javascript" src="<?php echo base_url() ?>assets/uniform/jquery.uniform.min.js"></script>
-   <script type="text/javascript" src="<?php echo base_url() ?>assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script> 
-   <script type="text/javascript" src="<?php echo base_url() ?>assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    
+   
    <script type="text/javascript" src="<?php echo base_url() ?>assets/bootstrap-toggle-buttons/static/js/jquery.toggle.buttons.js"></script>
   
    <script src="<?php echo base_url() ?>assets/fancybox/source/jquery.fancybox.pack.js"></script>

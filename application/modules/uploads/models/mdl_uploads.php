@@ -12,6 +12,20 @@ function get_table() {
     return $table;
 }
 
+function add_uploads($data)
+{
+$table = $this->get_table();
+$this->db->insert($table, $data);
+}
+
+public function get_files()
+{
+	$table = $this->get_table();
+    return $this->db->select()
+            ->from($table)
+            ->get()
+            ->result();
+}
 
 
 

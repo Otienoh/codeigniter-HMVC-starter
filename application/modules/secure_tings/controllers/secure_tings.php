@@ -6,15 +6,16 @@ function __construct() {
 parent::__construct();
 }
 
+
 function hash_it($password){
 	$safe_password=$this->kuchocha($password);
 	$safe_password1 = hash("sha512", $safe_password);
 	echo $safe_password1;
 	
 }
- 
+
 function kuchocha($password){
-	$chocha = $pass12word.="3456789abhijklmnopqrstuvRSTUVWYZ@#$%^&*";
+	$chocha = $password.="3456789abhijklmnopqrstuvRSTUVWYZ@#$%^&*";
 	return $chocha;
 
 }
@@ -30,14 +31,18 @@ redirect(users);
 function ni_admin(){
 $this->is_logged_in();	
 $user_group = $this->session->userdata('user_group');
-
+if (!$user_group=='1'){
+echo "no priviledges by the way";	
+}
 }
 
 
 function ni_national_user(){
 $this->is_logged_in();	
 $user_group = $this->session->userdata('user_group');
-
+if (!$user_group=='2'){
+echo "no priviledges by the way";	
+}
 }
 function ni_regional_user(){
 $this->is_logged_in();	
@@ -67,7 +72,6 @@ if (!$user_group=='9'){
 echo "no priviledges by the way";	
 }
 }
-
 
 
 }

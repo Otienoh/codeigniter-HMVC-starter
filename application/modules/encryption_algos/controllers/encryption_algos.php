@@ -10,6 +10,7 @@ $this->load->library('encrypt' );
 
 function index(){
 	//echo "welcome to Dashboard";
+	$data= $this->get_data_from_post();
 	$data['section'] = "Twiga";
     $data['subtitle'] = "Hashing Algorithms";
   	$data['page_title'] = "Demo";
@@ -18,18 +19,20 @@ function index(){
 	echo Modules::run('template/admin', $data);
 }
 
+function get_data_from_post(){
+            $data['plaintext']=$this->input->post('plaintext', TRUE);
+            return $data;
+        }
+
 function encrypting_without_key($text){
 	$encrypted_string_no = $this->encrypt->encode($text);
-	//echo $encrypted_string_no;
 	return $encrypted_string_no; 
 }
 
 function encrypting_with_key($text){
 $key = 'super-secret-key';
 $encrypted_string = $this->encrypt->encode($text, $key);
-//echo $encrypted_string;
 return $encrypted_string; 
-return $key; 
 }
 
 function decoding_without_key($test){
@@ -39,6 +42,7 @@ echo $plaintext_string;
 }
 
 function decoding_with_key($test){
+$key = 'super-secret-key';
 $ciphertext=$this->encrypting_with_key($test);
 $plaintext_string = $this->encrypt->decode($ciphertext, $key);
 echo $plaintext_string;

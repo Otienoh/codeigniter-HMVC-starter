@@ -8,10 +8,15 @@ $this->load->model('mdl_users');
 }
 
 function index(){
-    //echo "heeelo";
+$logged_in = $this->session->userdata('logged_in');
+
+if ($logged_in==FALSE){
     $data['module']="users";
     $data['view_file']="login_form";
     echo Modules::run('template/home', $data); 
+}else {
+    redirect('dashboard/home','refresh');
+}
 }
 
 function _logged_in_ok($username){
@@ -94,7 +99,7 @@ function get_register_data_from_post(){
         }
         else
         {       
-                   $data= $this->get_register_data_from_post();
+                $data= $this->get_register_data_from_post();
                 $password = $this->input->post('password', TRUE);
                     $data['password'] = Modules::run('secure_tings/hash_it', $password);
 
