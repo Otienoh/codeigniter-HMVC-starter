@@ -16,7 +16,7 @@
 | environments.
 |
 */
-$config['base_url'] = 'http://localhost:8080/Twiga/';
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/Twiga/';
 
 /*
 |--------------------------------------------------------------------------
