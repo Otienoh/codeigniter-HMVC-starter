@@ -24,8 +24,11 @@
 											<h5>Group Members</h5>
 											<div class="well">
 												<address>
-												<strong>Otieno Julie &mdash; 067709</strong><br />
-												<strong>Christine Kamathi &mdash; 073200</strong>	
+												<strong>Onyiego Raphael &mdash; 076526</strong><br />
+												<strong>Michelle Murungi &mdash; 072140</strong><br />
+                                    <strong>Mariga Wanjiru &mdash; 071889</strong><br />
+                                    <strong>Otieno Julie &mdash; 067709</strong><br />
+                                    <strong>Christine Kamathi &mdash; 073200</strong>	
 												</address>
 											</div>
 										</div>

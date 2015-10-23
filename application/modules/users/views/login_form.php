@@ -16,6 +16,10 @@ $attributes = array('class' => 'form-vertical no-padding no-margin', 'id'=>'logi
     <hr>
     <p class="center">
     <b>
+    
+      Onyiego Raphael <br>
+      Michelle Murungi<br>
+      Mariga Wanjiru<br>
       Christine Kamathi<br>
       Julie Otieno<br>
      </b>
