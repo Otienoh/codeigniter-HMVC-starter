@@ -25,6 +25,8 @@ $attributes = array('class' => 'form-vertical no-padding no-margin', 'id'=>'logi
      </b>
     </p>
     <hr>
+    <div class="alert alert-danger"><p><b>USERNAME: julie</b></p><p><b>PASWORD: qwerty</b></p></div>
+    <hr>
       <p class="center">Enter your username and password.</p>
       <div class="control-group">
         <div class="controls">
@@ -65,6 +67,8 @@ $attributes = array('class' => 'form-vertical no-padding no-margin', 'id'=>'logi
   <!-- END LOGIN -->
   <!-- BEGIN COPYRIGHT -->
   <div id="login-copyright">
-    CRYPTOGRAPHY GROUP PROJECT
+    CRYPTOGRAPHY GROUP PROJECT<br/>
+    BBIT YEAR 3
+    <marquee scrollamount="3"> <em>MAKE SURE YOU READ THE README.md!! To change this view edit the users/view/login_form.php</em></marquee>
   </div>
   <!-- END COPYRIGHT -->

@@ -29,6 +29,7 @@
     $this->load->view($module.'/'.$view_file);
     //echo "ghggh";
      ?>
+     
   <!-- BEGIN JAVASCRIPTS -->
   <script src="<?php echo base_url() ?>assets/js/jquery-1.8.2.min.js"></script>
   <script src="<?php echo base_url() ?>assets/bootstrap/js/bootstrap.min.js"></script>

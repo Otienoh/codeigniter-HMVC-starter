@@ -190,7 +190,7 @@
    <!-- END CONTAINER -->
    <!-- BEGIN FOOTER -->
    <div id="footer">
-         2015 &copy; Cryptography Group Project   &mdash;   Twiga Group.
+         2015 &copy; Submited as Cryptography Group Project   &mdash;   Twiga Group.
      
    </div>
    <!-- END FOOTER -->
